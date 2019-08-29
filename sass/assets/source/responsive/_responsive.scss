@@ -1,0 +1,124 @@
+/* Override Default Neat Grid */
+$neat-grid: ( columns: 12, gutter: 30px, );
+/* Custom Grids for Neat Mixins */
+$tablet-grid: ( columns: 12, gutter: 30px, media: 768px, );
+$desktop-grid: ( columns: 12, gutter: 30px, media: 1024px, );
+$large-grid: ( columns: 12, gutter: 30px, media: 1280px, );
+$xlarge-grid: ( columns: 12, gutter: 30px, media: 1440px, );
+/* Responsive Media Mixins */
+$mobile-sm-width: 575px;
+$mobile-width: 768px;
+$tablet-vert-width: 768px;
+$tablet-horz-width: 1024px;
+$desktop-sm-width: 1280px;
+$desktop-md-width: 1440px;
+$desktop-lg-width: 1600px;
+$desktop-xl-width: 2500px;
+@mixin mobile-sm {
+	@media screen and (max-width: #{$mobile-sm-width}){
+    @content;
+  }
+}
+@mixin mobile {
+   @media screen and (max-width: #{$tablet-vert-width - 1px}){
+    @content;
+  }
+}
+@mixin tablet {
+   @media screen and (min-width: #{$tablet-vert-width}){
+    @content;
+  }
+}
+@mixin tablet-only {
+   @media screen and (min-width: #{$tablet-vert-width}) and (max-width: #{$tablet-horz-width - 1px}){
+    @content;
+  }
+}
+@mixin desktop {
+   @media screen and (min-width: #{$tablet-horz-width}){
+    @content;
+  }
+}
+@mixin desktop-xs-only {
+   @media screen and (min-width: #{$tablet-horz-width}) and (max-width: #{$desktop-sm-width}){
+    @content;
+  }
+}
+@mixin desktop-sm {
+   @media screen and (min-width: #{$desktop-sm-width}){
+    @content;
+  }
+}
+@mixin desktop-sm-only {
+   @media screen and (min-width: #{$desktop-sm-width}) and (max-width: #{$desktop-md-width - 1px}){
+    @content;
+  }
+}
+@mixin desktop-md {
+   @media screen and (min-width: #{$desktop-md-width}){
+    @content;
+  }
+}
+@mixin desktop-md-only {
+   @media screen and (min-width: #{$desktop-md-width}) and (max-width: #{$desktop-width - 1px}){
+    @content;
+  }
+}
+@mixin desktop-lg {
+   @media screen and (min-width: #{$desktop-lg-width}){
+    @content;
+  }
+}
+
+@mixin desktop-xl {
+   @media screen and (min-width: #{$desktop-xl-width}){
+    @content;
+  }
+}
+
+@include mobile {
+  .fourcol-one, .fourcol-three, .fourcol-two, .threecol-one, .threecol-two, .twocol-one { position: relative; width: 100%; }
+}
+
+@include tablet {
+
+  .twocol-one {
+    float: left;
+    margin-left: 30px;
+    width: calc(50% - 15px);
+  }
+
+  .threecol-one {
+    @include grid-column(4);
+    width: 33.3333333333%;
+  }
+
+  .threecol-two {
+    @include grid-column(8);
+  }
+
+  .fourcol-one {
+    @include grid-column(3);
+  }
+
+  .fourcol-two {
+    float: left;
+    margin-left: 30px;
+    width: calc(50% - 15px);
+  }
+
+  .fourcol-three {
+    @include grid-column(9);
+        
+  }
+
+  .first {
+    clear: left;
+    margin-left: 0;
+  }
+
+  .last {
+    clear: right;
+    margin-right: 0;
+  }
+}

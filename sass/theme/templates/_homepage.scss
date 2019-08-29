@@ -1,0 +1,318 @@
+/*****************************************************************
+Slider
+*****************************************************************/
+
+.homepage-slider {
+	.slider-img {
+		height: 100vh;
+		padding-bottom: 10em;
+		
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-end;
+		
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: 75% top;
+		
+		position: relative;
+		
+		@include desktop-sm {
+			justify-content: center;
+			padding-bottom: 0em;
+		}
+		
+		.slider-text {
+			max-width: 100%;
+			margin: 40px;
+			
+			@include tablet {
+				max-width: 70%;
+			}
+			
+			@include desktop {
+				max-width: 50%;
+			}
+			
+			@include desktop-sm {
+				max-width: auto;
+			}
+			
+			@include desktop-sm {
+				max-width: 1600px;
+				width: 1600px;
+				margin: 0 auto;
+				img {
+					width: auto;
+					max-width: 110%;
+				}
+			}
+		}
+	}
+	.owl-nav {
+		color: $white;
+		position: absolute;
+    top: 43vh;
+    font-size: 2em;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+	}
+	.owl-prev, .owl-next {
+		margin: 0 20px;
+	}
+}
+
+.slider-wrapper {
+	position: relative;
+	.next {
+		position: absolute;
+		z-index: 1;
+		bottom: 20px;
+		width: 100%;
+		text-align: center;
+		font-size: 2em;
+		a {
+			margin-left: 9px;
+			font-size: 1.2em;
+			color: $white;
+			text-shadow: 0px 0px 10px black;
+		}
+		
+		@include mobile {
+			display: none;
+		}
+	}
+}
+
+
+
+
+/*****************************************************************
+Callouts
+*****************************************************************/
+.home-callouts {
+	.product-carousel {
+		position: relative;
+		.owl-nav {
+			position: absolute;
+	    width: 100%;
+	    top: 39%;
+			display: flex;
+			justify-content: space-between;
+			button {
+				margin: 0 25px;
+				font-size: 1.5em;
+				color: $white;
+			}
+			
+			@include desktop {
+				display: none;
+			}
+		}
+	}
+	.background {
+		height: 250px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		justify-content: space-between;
+		
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		
+		transition: all 0.5s ease;
+		.co-link {
+			color: $white;
+			text-align: right;
+			text-transform: uppercase;
+			font-weight: 700;
+			margin: 15px;
+			
+			text-shadow: 1px 1px 10px rgba(0,0,0,.75);
+		}
+		.co-title {
+			align-self: flex-end;
+			margin: 15px;
+			
+			h2 {
+				color: $white;
+				font-weight: 700;
+				text-transform: uppercase;
+				margin: 0;
+				text-align: right;
+				font-size: 2em;
+				line-height: 1em;
+				
+				text-shadow: 1px 1px 10px $black;
+			}
+		}
+		
+		&:hover {
+			background-size: 115%;
+			transform: scale(1.05);
+		}
+		
+		@include tablet {
+			height: 350px;
+			
+			.co-title {
+				h2 {
+					font-size: 2.8em;
+				}
+			}
+		}
+	}
+	
+	.location {
+		.location-wrapper {
+			background: rgba(144,37,39,1);
+			background: -moz-radial-gradient(center, ellipse cover, rgba(144,37,39,1) 0%, rgba(97,13,13,1) 100%);
+			background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(144,37,39,1)), color-stop(100%, rgba(97,13,13,1)));
+			background: -webkit-radial-gradient(center, ellipse cover, rgba(144,37,39,1) 0%, rgba(97,13,13,1) 100%);
+			background: -o-radial-gradient(center, ellipse cover, rgba(144,37,39,1) 0%, rgba(97,13,13,1) 100%);
+			background: -ms-radial-gradient(center, ellipse cover, rgba(144,37,39,1) 0%, rgba(97,13,13,1) 100%);
+			background: radial-gradient(ellipse at center, rgba(144,37,39,1) 0%, rgba(97,13,13,1) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#902527', endColorstr='#610d0d', GradientType=1 );
+		}
+	}
+	
+	.news {
+		.news-wrapper {
+			background: rgba(33,84,115,1);
+			background: -moz-radial-gradient(center, ellipse cover, rgba(33,84,115,1) 0%, rgba(6,46,69,1) 100%);
+			background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(33,84,115,1)), color-stop(100%, rgba(6,46,69,1)));
+			background: -webkit-radial-gradient(center, ellipse cover, rgba(33,84,115,1) 0%, rgba(6,46,69,1) 100%);
+			background: -o-radial-gradient(center, ellipse cover, rgba(33,84,115,1) 0%, rgba(6,46,69,1) 100%);
+			background: -ms-radial-gradient(center, ellipse cover, rgba(33,84,115,1) 0%, rgba(6,46,69,1) 100%);
+			background: radial-gradient(ellipse at center, rgba(33,84,115,1) 0%, rgba(6,46,69,1) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#215473', endColorstr='#062e45', GradientType=1 );
+		}
+	}
+	
+	.location-wrapper, .news-wrapper {
+		color: $white;
+		padding: 15px;
+		
+		h2 {
+			text-transform: uppercase;
+			font-weight: 700;
+			font-size: 2.5em;
+		}
+	}
+	
+	.location-wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		.socials {
+			ul {
+				padding: 0;
+				margin: 0;
+				list-style: none;
+				display: flex;
+			}
+		}
+		a {
+			color: $white;
+			margin: 0 2.5px;
+			font-size: 1.1em;
+		}
+	}
+	
+	.news-wrapper {
+		a {
+			color: $white;
+			text-transform: uppercase;
+			font-weight: 500;
+		}
+	}
+}
+
+
+/*****************************************************************
+Testimonial
+*****************************************************************/
+.testimonial {
+	.testimonial-image {
+		max-width: 175px;
+		margin-right: 30px;
+		margin-bottom: 30px;
+		
+		img {
+			border: 8px solid $white;
+			box-shadow: 1px 1px 15px rgba(0,0,0,.5);
+			border-radius: 10px;
+		}
+	}
+	.testimonial-content {
+	}
+}
+
+/*****************************************************************
+Homepage Carousel
+*****************************************************************/
+.homepage-carousel {
+	margin-bottom: 0;
+	
+	.gallery-item {
+		
+		img {
+			position: relative;
+		}
+		
+		&:hover {
+			.img-description {
+				opacity: 1;
+				
+				transition-duration: .5s;
+				transition-property: opacity;
+				transition-timing-function: ease-in;
+			}
+		}
+		
+		.img-description {
+			position: absolute;
+	    top: 0;
+	    background: rgba(0,0,0,.75);
+	    width: 100%;
+	    height: 100%;
+	    opacity: 0;
+	    display: flex;
+	    flex-direction: column;
+	    justify-content: center;
+	    
+	    transition-duration: .5s;
+			transition-property: opacity;
+			transition-timing-function: ease-in;
+			
+			.description {
+				text-transform: uppercase;
+				font-size: 1.2em;
+				margin: 0 1em;
+				color: $white;
+			}
+			.icon {
+				font-size: 5em;
+				margin: .25rem;
+				color: $white;
+			}
+		}
+		
+	}
+	.owl-prev, .owl-next {
+        position:absolute;
+     }
+
+    .owl-prev {
+        left:0;
+        top: 200px;
+     }
+
+     .owl-next {
+        right:0;
+        top:200px;
+     }
+}

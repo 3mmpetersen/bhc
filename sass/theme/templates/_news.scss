@@ -1,0 +1,90 @@
+/*****************************************************************
+News
+*****************************************************************/
+
+.blog {
+	
+	.archive-news {
+		h1 {
+			font-size: 3em;
+			text-transform: uppercase;
+			font-weight: 700;
+			margin-bottom: 0;
+			@include desktop {
+				font-size: 4em;
+			}
+		}
+	}
+	
+	article {
+		margin-bottom: 3rem;
+		
+		p {
+			margin-bottom: .5rem;
+		}
+	}
+	
+}
+
+#tribe-events-list-widget-2 {
+	.widget-title {
+		font-size: 3em;
+		text-transform: uppercase;
+		font-weight: 700;
+		margin-bottom: 0;
+		@include desktop {
+			font-size: 4em;
+		}
+	}
+	h4 {
+		a {
+			color: $black;
+			&:hover {
+				color: $primary;
+			}
+		}
+	}
+	.tribe-list-widget {
+		margin: 2px;
+		padding: 0;
+		max-width: 250px;
+		li {
+			margin: 0;
+			padding: 0;
+			margin-bottom: 1rem;
+		}
+	}
+	.tribe-events-widget-link {
+		display: none;
+	}
+}
+
+.single-post {
+	article {
+		h1 {
+			text-transform: uppercase;
+			font-weight: 700;
+			margin-bottom: 5px;
+		}
+		.entry-meta {
+			font-size: .9em;
+	    font-style: italic;
+	    color: black;
+	    margin-bottom: 1.5rem;
+	    a {
+		    color: $black;
+	    }
+		}
+		.updated {
+			display: none;
+		}
+	}
+}
+
+.entry-header.page-header {
+	display: block !important;
+}
+
+.events-archive .entry-content, .events-archive .entry-header {
+	width: 100%;
+}

@@ -1,0 +1,29 @@
+.wpcf7 {
+	max-width: 100%;
+	margin: 20px 0 !important;
+	.form-control, input[type=text], input[type=search], input[type=url], input[type=tel], input[type=number],
+	input[type=range], input[type=date], input[type=month], input[type=week], input[type=time], input[type=datetime],
+	input[type=datetime-local], input[type=color], input[type=email], input[type=file], input[type=submit],
+	select, textarea, .wpcf7-validation-errors {
+		display: block;
+	  width: 100%;
+	  height: calc(2.0625em + 15px);
+	  color: $black;
+	  background-color: #E6E7E8;
+	  border: 1px solid #6D6E71;
+	  border-radius: 0;
+	}
+	textarea {
+		height: auto;
+		max-height: 100px;
+	}
+	input[type=submit] {
+		color: $white;
+		background-color: $primary;
+		width: auto;
+	}
+	.wpcf7-list-item {
+		margin: 0;
+		text-transform: none;
+	}
+}

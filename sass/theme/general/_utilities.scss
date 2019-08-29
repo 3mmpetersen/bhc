@@ -1,0 +1,125 @@
+// Weight and italics
+
+.font-weight-medium  { font-weight: $font-weight-medium !important; }
+.font-weight-semi  { font-weight: $font-weight-semi !important; }
+.font-weight-xbold  { font-weight: $font-weight-xbold !important; }
+
+/* in Bootstrap _text.scss
+.font-weight-light  { font-weight: $font-weight-light !important; }
+.font-weight-normal { font-weight: $font-weight-normal !important; }
+.font-weight-bold   { font-weight: $font-weight-bold !important; }
+.font-italic        { font-style: italic !important; }
+*/
+
+.wrapper {
+	padding: 30px 15px;
+}
+
+.mb-30px {
+	margin-bottom: 30px;
+}
+
+.txt-link {
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+/** Links **/
+a.anchor-link {
+  display: block;
+  position: relative;
+  top: -180px;
+  visibility: hidden;
+}
+
+/** Buttons **/
+.btn, .wpcf7, .tribe-events-button {
+	text-transform: uppercase;
+	padding: .75rem 1.75rem;
+	border-radius: 0;
+	font-size: .9em;
+	font-weight: 500;
+	
+	@include desktop{
+		font-size: 1.1em;
+	}
+}
+
+
+/** Images **/
+
+/** Gallery **/
+.image-gallery {
+	.image-gallery-single {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		padding: 6px;
+		.item {
+			-ms-flex-preferred-size: 25%;
+			    flex-basis: 25%;
+			padding: 6px;
+			&:first-child {
+			}
+		}
+	}	
+}
+
+
+/*****************************************************************
+404 Error
+*****************************************************************/
+.error-wrapper {
+	background: rgba(250,250,250,1);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(250,250,250,1)), color-stop(36%, rgba(250,250,250,1)), color-stop(100%, rgba(217,217,217,1)));
+	background: -webkit-linear-gradient(left, rgba(250,250,250,1) 0%, rgba(250,250,250,1) 36%, rgba(217,217,217,1) 100%);
+	background: -o-linear-gradient(left, rgba(250,250,250,1) 0%, rgba(250,250,250,1) 36%, rgba(217,217,217,1) 100%);
+	background: -webkit-gradient(linear, left top, right top, from(rgba(250,250,250,1)), color-stop(36%, rgba(250,250,250,1)), to(rgba(217,217,217,1)));
+	background: linear-gradient(to right, rgba(250,250,250,1) 0%, rgba(250,250,250,1) 36%, rgba(217,217,217,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#d9d9d9', GradientType=1 );
+
+	padding: 60px;
+	min-height: calc(100vh - 550px);
+	
+	@include tablet {
+		min-height: calc(100vh - 635px);
+	}
+	@include desktop-lg {
+		min-height: calc(100vh - 779px);
+	}
+	
+	.col-md-6 {
+		margin: 0 auto;
+		text-align: center;
+	}
+}
+
+
+/*****************************************************************
+Calendar
+*****************************************************************/
+.tribe-events-cal-links {
+	
+	.tribe-events-button {
+		text-transform: uppercase !important;
+		padding: .75rem 1.75rem !important;
+		border-radius: 0 !important;
+		font-size: .9em !important;
+		font-weight: 500 !important;
+		background-color: $primary !important;
+	}
+}
+
+#tribe-events-list-widget-2 .tribe-list-widget {
+	margin-top: 3rem !important;
+}
+
+.tribe-events-present div {
+	background-color: $primary !important;
+}
+
+#tribe-bar-form .tribe-bar-submit input[type=submit] {
+	background: $primary;
+}

@@ -1,0 +1,19 @@
+/*****************************************************************
+Contact Us
+*****************************************************************/
+
+.contact-us-page {
+	.location {
+		a {
+			color: $black;
+			
+			&:hover {
+				color: $primary;
+			}
+		}
+		.socials, .social-media-icons {
+			padding: 0 !important;
+			
+		}
+	}
+}

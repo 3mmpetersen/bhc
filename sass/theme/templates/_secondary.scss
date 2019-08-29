@@ -1,0 +1,116 @@
+/*****************************************************************
+Secondary Header
+*****************************************************************/
+.page-header {
+	
+	.feat-image {
+		position: relative;
+		height: 200px;
+		
+		@include desktop {
+			height: 300px;
+		}
+		
+		@include desktop-lg {
+			height: 450px;
+		}
+		
+		background-size: cover !important;
+		background-position: right center !important;
+		
+		.container {
+			height: 100%;
+			display: flex;
+			align-items: flex-end;
+			
+			.entry-title {
+				color: $white;
+				font-weight: 700;
+				font-size: 4em;
+				line-height: 1.3rem;
+				text-transform: uppercase;
+				margin-left: -4px;
+				
+				@include desktop {
+					font-size: 4.4em;
+					line-height: 1.8rem;
+				}
+				
+				@include desktop-lg {
+					margin-left: -15px;
+					font-size: 6em;
+					line-height: 2.5rem;
+				}
+				
+				@include mobile-sm {
+					font-size: 2.5em;
+					line-height: 2.4rem;
+					margin-bottom: -7px;
+				}
+			}
+		}
+
+	}
+	
+}
+
+#ad-sidebar {
+	&.vert {
+		img {			
+			@include desktop {
+				padding-right: 40px;
+			}
+		}
+	}
+	
+	@include mobile {
+		display: none;
+	}
+}
+
+.team-members {
+	h4 {
+		font-weight: 600;
+	}
+}
+
+/*****************************************************************
+FAQ Page
+*****************************************************************/
+.page-id-494 {
+	h4 {
+		color: $black;
+		text-transform: uppercase;
+		margin-top: 30px;
+
+	}
+		
+	.faq-question {
+		margin-bottom: 0;
+		a {
+			color: $black;
+		}
+	}
+	.faq-answer {
+		margin-bottom: 10px;
+	}
+	
+	a {
+		.fa-minus {
+			display: none;
+		}
+		&[aria-expanded='true'] {
+			.fa-minus {
+				display: inline-block;
+			}
+			.fa-plus {
+				display: none;
+			}
+		}
+		&:hover {
+			.fa-minus, .fa-plus {
+				color: $primary;
+			}
+		}
+	}
+}
